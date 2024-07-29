@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:clothing_store/widgets/category_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,7 +17,7 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(150.0),
+        preferredSize: Size.fromHeight(screenHeight * 0.29),
         child: ClipRRect(
           borderRadius: BorderRadius.vertical(
             bottom: Radius.circular(30.0)
@@ -43,7 +44,13 @@ class _HomePageState extends State<HomePage> {
                     labelText: 'Tìm kiếm',
                   ),
                 ),
-                )
+                ),
+                SizedBox(height: screenHeight * 0.03,),
+                Container(
+                  height: 120.0,
+                  width: double.infinity,
+                  child: CategoryWidget(),
+                ),
               ],
             ),
           ),
