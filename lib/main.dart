@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/home_page.dart';
 
 /// Flutter code sample for [BottomNavigationBar].
 
@@ -26,21 +27,9 @@ class BottomNavigationBarExample extends StatefulWidget {
 class _BottomNavigationBarExampleState
     extends State<BottomNavigationBarExample> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Page1',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Page2',
-      style: optionStyle,
-    ),
+    HomePage()
   ];
 
   void _onItemTapped(int index) {
@@ -53,7 +42,7 @@ class _BottomNavigationBarExampleState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
+        // title: const Text('BottomNavigationBar Sample'),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
