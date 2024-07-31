@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:clothing_store/widgets/category_widget.dart';
-
+import 'package:clothing_store/widgets/list_product_widget.dart';
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -56,6 +56,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+      body: ListProduct(),
     );
   }
 }
