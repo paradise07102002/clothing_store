@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CategoryWidget extends StatefulWidget {
-  const CategoryWidget({super.key});
+  const CategoryWidget({super.key, required this.width, required this.height});
 
+  final double width;
+  final double height;
   @override
   State<CategoryWidget> createState() => _CategoryWidgetState();
 }
@@ -20,11 +22,11 @@ class _CategoryWidgetState extends State<CategoryWidget> {
         return Column(
           children: [
             Container(
-              width: 64.0,
-              height: 64.0,
+              width: widget.width * 0.165,
+              height: widget.width * 0.165,
               padding: const EdgeInsets.all(5.0),
               decoration: BoxDecoration(
-                borderRadius: const BorderRadius.all(Radius.circular(32.0)),
+                borderRadius: BorderRadius.all(Radius.circular(widget.width * 0.33)),
                 border: Border.all(
                   color: Colors.black,
                   width: 2.0
