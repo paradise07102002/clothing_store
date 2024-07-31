@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   height: 120.0,
                   width: double.infinity,
-                  child: CategoryWidget(),
+                  child: CategoryWidget(width: screenWith, height: screenHeight),
                 ),
               ],
             ),
