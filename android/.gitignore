@@ -5,6 +5,7 @@ gradle-wrapper.jar
 /gradlew.bat
 /local.properties
 .vscode/
+pubspec.lock
 GeneratedPluginRegistrant.java
 
 # Remember to never publicly share your keystore.
